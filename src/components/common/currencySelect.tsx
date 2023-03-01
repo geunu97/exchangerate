@@ -1,20 +1,22 @@
-import React from 'react'
+import React from 'react';
 import { COUNTRY_CURRENCY_CODE_LIST } from '../../constants/CountryCurrencyCodeList';
 
 interface CurrencySelectProps {
-  className: string,
+  className: string;
   defaultValue: string;
   onChange: (event: React.ChangeEvent<HTMLSelectElement>) => void;
 }
 
-function CurrencySelect ({ ...props }: CurrencySelectProps) {
+function CurrencySelect({ ...props }: CurrencySelectProps) {
   return (
-    <select {...props} >
-      {COUNTRY_CURRENCY_CODE_LIST.map(COUNTRY => (
-        <option value={COUNTRY.CODE} key={COUNTRY.CODE}>{COUNTRY.CURRENCY}</option>
+    <select {...props}>
+      {COUNTRY_CURRENCY_CODE_LIST.map((COUNTRY) => (
+        <option value={COUNTRY.CODE} key={COUNTRY.CODE}>
+          {COUNTRY.CURRENCY}
+        </option>
       ))}
-  </select>
-  )
+    </select>
+  );
 }
 
-export default CurrencySelect
+export default CurrencySelect;

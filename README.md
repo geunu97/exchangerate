@@ -13,7 +13,7 @@ npm install
 npm start
 ```
 
-### 3. 확인하기
+### 3. 로컬 환경에서 확인하기
 
 ```
 http://localhost:3000/
